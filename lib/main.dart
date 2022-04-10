@@ -9,7 +9,7 @@ import 'screens/dataScreen.dart';
 import 'screens/secondScreen.dart';
 import 'screens/stackDatos.dart';
 import 'screens/formScreen.dart';
-
+import 'screens/tarjetaScreen.dart';
 
 
 void main() {
@@ -24,6 +24,7 @@ void main() {
       '/stack': (context) => const TestStack(),
       '/stackDatos': (context) => const StackDatos(),
       '/formScreen': (context) => const FormScreen(),
+      '/tarjetaScreen': (context) => const TarjetaScreen(),
     },
     //home: HomePage(),
   ));
@@ -217,6 +218,18 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/formScreen");
 
                   Navigator.pushNamed(context, '/stackDatos');
+                }),
+                SizedBox(height: 5.0),
+            ElevatedButton(
+                child: Text("TarjetaScreen"),
+                onPressed: () {
+                  /*
+                final route = MaterialPageRoute(
+                  builder: (context) => const DatosPage(),
+                );
+                */
+                  //Navigator.push(context, route);//abre la ventana nueva
+                  Navigator.pushNamed(context, "/tarjetaScreen");
                 }),
           ],
         )),
