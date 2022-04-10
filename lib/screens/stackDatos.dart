@@ -26,7 +26,7 @@ class StackDatos extends StatelessWidget {
                 height: 900.0,
                 //color: Colors.red,
                 child: Image.asset(
-                  "assets/img/edson6.jpg", //agregar imagen desde caretas
+                  "img/angelica.jpeg", //agregar imagen desde caretas
                   width: 500.0, //tamano de la imagen
                   height: 500.0,
                 ),
@@ -38,8 +38,8 @@ class StackDatos extends StatelessWidget {
                   width: 250.0,
                   height: 250.0,
                   //color: Colors.black,
-                  child: const Text("Edson RRH",
-                      style: TextStyle(color: Colors.white)),
+                  child: const Text("Angélica M.M",
+                      style: TextStyle(color: Color.fromARGB(255, 10, 10, 10))),
                 ),
               ),
               Positioned(
@@ -52,7 +52,7 @@ class StackDatos extends StatelessWidget {
                   child: ElevatedButton(
                     child: const Text("Regresar"),
                     onPressed: () => Navigator.pop(
-                        context), //pop borra a la segunda pantalla de memoria y regresa a la primera
+                        context), //Pop borra a la segunda pantalla de memoria y regresa a la primera.
                   ),
                 ),
               )

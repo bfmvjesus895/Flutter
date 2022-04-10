@@ -2,11 +2,12 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/screens/stackScreen.dart';
 //importar librerias de las demas paginas
 
 import 'screens/dataScreen.dart';
 import 'screens/secondScreen.dart';
+import 'screens/stackDatos.dart';
 
 
 
@@ -19,7 +20,8 @@ void main() {
       '/': (context) => const HomePage(),
       '/second': (context) => const SecondPage(),
       '/datos': (context) => const DatosPage(),
-      
+      '/stack': (context) => const TestStack(),
+      '/stackDatos': (context) => const StackDatos(),
     },
     //home: HomePage(),
   ));
@@ -48,18 +50,18 @@ class MyApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: <Widget>[
-            //const marca un roblema a la hora de agregar una imagen con assets, eliminar
+            //const marca un problema a la hora de agregar una imagen con assets, eliminar.
             Icon(
-              //eliminar assets e ignorar los demas errors en azul
+              //eliminar assets e ignorar los demás error en azul
               Icons
-                  .phone_android, //con esta linea se establecen iconos predeterminados
+                  .phone_android, //Con esta lÍnea se establecen íconos predeterminados
               size: 100, //tamano del icono
               color: Colors.red, //color del icono
 
-              //colocar una imagen, podemos hacerlo, cargando las imagenes desde internet, ero cuando el
-              //usuario no tenga una buena conexion no mostrara nada
+              //colocar una imagen, podemos hacerlo, cargando las imágenes desde internet, cuando el
+              //usuario no tenga una buena conexión no mostrara nada
               // colocar un imagen desde la estructura de carpetas significa que la aplicacion
-              //cresca en tamano, al final las imagenes son recursos
+              //cresca en tamaño, al final las imágenes son recursos
             ),
             SizedBox(width: 10.0),
             Text(
@@ -73,7 +75,7 @@ class MyApp extends StatelessWidget {
             Text("Texto 2", style: TextStyle(fontSize: 25.0)),
             SizedBox(width: 20.0),
             Image.asset(
-              'img/angelica.jpeg', //agregar imagen desde caretas
+              "img/angelica.jpeg", //agregar imagen desde caretas
               width: 100.0, //tamano de la imagen
             ),
             SizedBox(
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
             Image.network(
               "https://pixlok.com/wp-content/uploads/2021/05/flutter-logo-768x768.jpg",
               width:
-                  170.0, //Agregar imagen desde internete con el url de la imagen
+                  170.0, //Agregar imagen desde internet con el url de la imagen
             ),
           ],
         ),
@@ -174,13 +176,36 @@ class HomePage extends StatelessWidget {
                   //Navigator.push(context, route);//abre la ventana nueva
                   Navigator.pushNamed(context, "/datos");
                 }),
-            
-            
-            
+            SizedBox(height: 5.0),
+            ElevatedButton(
+                child: Text("StackTest"),
+                onPressed: () {
+                  /*
+                final route = MaterialPageRoute(
+                  builder: (context) => const DatosPage(),
+                );
+                */
+
+                  //Navigator.push(context, route);//abre la ventana nueva
+                  Navigator.pushNamed(context, "/stack");
+                }),
+            SizedBox(height: 5.0),
+            ElevatedButton(
+                child: Text("StackDatos"),
+                onPressed: () {
+                  /*
+                final route = MaterialPageRoute(
+                  builder: (context) => const DatosPage(),
+                );
+                */
+
+                  //Navigator.push(context, route);//abre la ventana nueva
+                  Navigator.pushNamed(context, '/stackDatos');
+                }),
           ],
         )),
       ),
     );
   }
 }
-
+//'/stackDatos'
