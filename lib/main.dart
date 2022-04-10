@@ -8,6 +8,7 @@ import 'package:flutter_application_1/screens/stackScreen.dart';
 import 'screens/dataScreen.dart';
 import 'screens/secondScreen.dart';
 import 'screens/stackDatos.dart';
+import 'screens/formScreen.dart';
 
 
 
@@ -22,6 +23,7 @@ void main() {
       '/datos': (context) => const DatosPage(),
       '/stack': (context) => const TestStack(),
       '/stackDatos': (context) => const StackDatos(),
+      '/formScreen': (context) => const FormScreen(),
     },
     //home: HomePage(),
   ));
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
   //stateless no se le pueden agregar funcionalidades
   const MyApp({Key? key}) : super(key: key);
 
-  // primera modificacion del codigo fluttter
+  // Primera modificación del codigo fluttter
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         title: const Text("pagina inicial"), //appBar parte superior
       ),
       body: Container(
-        //contenedor
+        //Contenedor
         alignment: Alignment.center,
         child: Column(
           //hijo
@@ -76,7 +78,7 @@ class MyApp extends StatelessWidget {
             SizedBox(width: 20.0),
             Image.asset(
               "img/angelica.jpeg", //agregar imagen desde caretas
-              width: 100.0, //tamano de la imagen
+              width: 100.0, //tamaño de la imagen
             ),
             SizedBox(
               height: 20.0,
@@ -92,7 +94,7 @@ class MyApp extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         //boton flotante
         child: const Icon(Icons.thumb_up), //thumb_up icono de la manita
-        onPressed: () => {}, //funcion anonima de flecha
+        onPressed: () => {}, //función anonima de flecha
       ),
     );
   }
@@ -118,7 +120,7 @@ class HomePage extends StatelessWidget {
           //leading: IconButton(icon: Icon(Icons.menu),onPressed: () => {},),
           centerTitle: true, //appBar parte superior
           title: Text("pagina inicial"),
-          elevation: 20.0, //elevacion del menu
+          elevation: 20.0, //elevacion del menú
           shadowColor: Color.fromARGB(255, 19, 30, 194), //sombra del background
           backgroundColor:
               Color.fromARGB(255, 54, 216, 244), //color de bacground
@@ -200,6 +202,20 @@ class HomePage extends StatelessWidget {
                 */
 
                   //Navigator.push(context, route);//abre la ventana nueva
+                  Navigator.pushNamed(context, '/stackDatos');
+                }),
+                SizedBox(height: 5.0),
+            ElevatedButton(
+                child: Text("FormScreen"),
+                onPressed: () {
+                  /*
+                final route = MaterialPageRoute(
+                  builder: (context) => const DatosPage(),
+                );
+                */
+                  //Navigator.push(context, route);//abre la ventana nueva
+                  Navigator.pushNamed(context, "/formScreen");
+
                   Navigator.pushNamed(context, '/stackDatos');
                 }),
           ],
