@@ -26,7 +26,7 @@ class StackDatos extends StatelessWidget {
                 height: 900.0,
                 //color: Colors.red,
                 child: Image.asset(
-                  "img/angelica.jpeg", //agregar imagen desde caretas
+                  "img/foto.jpeg", //agregar imagen desde caretas
                   width: 500.0, //tamano de la imagen
                   height: 500.0,
                 ),
@@ -38,8 +38,9 @@ class StackDatos extends StatelessWidget {
                   width: 250.0,
                   height: 250.0,
                   //color: Colors.black,
-                  child: const Text("Angélica M.M",
-                      style: TextStyle(color: Color.fromARGB(255, 10, 10, 10))),
+                  child: const Text("Jesús Arturo P.M.",
+                      style:
+                          TextStyle(color: Color.fromARGB(255, 253, 253, 253))),
                 ),
               ),
               Positioned(

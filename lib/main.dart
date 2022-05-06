@@ -11,11 +11,10 @@ import 'screens/stackDatos.dart';
 import 'screens/formScreen.dart';
 import 'screens/tarjetaScreen.dart';
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'Flutter Demo',
+    title: 'Flutter',
     initialRoute: '/',
     routes: {
       '/': (context) => const HomePage(),
@@ -78,7 +77,7 @@ class MyApp extends StatelessWidget {
             Text("Texto 2", style: TextStyle(fontSize: 25.0)),
             SizedBox(width: 20.0),
             Image.asset(
-              "img/angelica.jpeg", //agregar imagen desde caretas
+              "img/foto.jpeg", //agregar imagen desde caretas
               width: 100.0, //tamaño de la imagen
             ),
             SizedBox(
@@ -205,7 +204,7 @@ class HomePage extends StatelessWidget {
                   //Navigator.push(context, route);//abre la ventana nueva
                   Navigator.pushNamed(context, '/stackDatos');
                 }),
-                SizedBox(height: 5.0),
+            SizedBox(height: 5.0),
             ElevatedButton(
                 child: Text("FormScreen"),
                 onPressed: () {
@@ -219,7 +218,7 @@ class HomePage extends StatelessWidget {
 
                   Navigator.pushNamed(context, '/stackDatos');
                 }),
-                SizedBox(height: 5.0),
+            SizedBox(height: 5.0),
             ElevatedButton(
                 child: Text("TarjetaScreen"),
                 onPressed: () {

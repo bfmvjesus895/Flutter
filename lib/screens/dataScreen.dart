@@ -16,11 +16,11 @@ class DatosPage extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: 20.0),
               Image.asset(
-                'img/angelica.jpeg',
+                'img/foto.jpeg',
                 width: 170.0,
               ),
               Text(
-                'Angélica Martínez Miranda',
+                'Jesús Arturo Pérez Méndez',
                 style: TextStyle(
                   fontSize: 30.0,
                   color: Color.fromARGB(255, 24, 23, 23),
